@@ -1,0 +1,398 @@
+{% extends "../layouts/base.njk" %}
+
+{% set title = "Home" %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero text-white">
+
+
+
+  <div class="container content py-5">
+
+    <p style="letter-spacing:3px; color:white;">OUR STORY & SERVICES</p>
+
+    <h1 class="hero-title">
+  WE ARE <br>
+  <span class="velocity">VELOCITY</span>
+  <span class="auto">AUTO</span>
+</h1>
+
+    <p class="mt-4" style="max-width:600px; color:#bbb;">
+      Premium car service experience built for performance and trust.
+    </p>
+
+    <div class="mt-4">
+      <a href="#packages" class="btn btn-custom me-3">BOOK A SERVICE</a>
+<a href="#process" class="btn btn-outline-custom">OUR PROCESS</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="container pt-2 pb-3 text-center ">
+  <div class="row">
+
+    <div class="col-md-4">
+  <div class="info-box">
+    <h4>OUR MISSION</h4>
+    <p>Deliver precision automotive care with full transparency.</p>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="info-box">
+  <h4>OUR VISION</h4>
+  <p>Become India’s most trusted premium car service brand.</p>
+</div>
+</div>
+
+<div class="col-md-4">
+  <div class="info-box">
+    <h4>OUR VALUES</h4>
+    <p>Honesty. Precision. Accountability.</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="container py-4 text-center" id="process">
+
+  <p style="letter-spacing:2px;">HOW IT WORKS</p>
+<h2>OUR PROCESS</h2>
+
+  <p class="text-muted mb-5">
+    From the moment you call to the moment your keys are back —
+    a seamless premium experience.
+  </p>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="process-card">
+        <p class="step-no">STEP 01</p>
+        <h5>BOOK ONLINE</h5>
+        <p>Choose your service, pick a slot, confirm in 60 seconds.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="process-card">
+        <p class="step-no">STEP 02</p>
+        <h5>DROP / PICKUP</h5>
+        <p>Drive in or we pick your car from your home.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="process-card">
+        <p class="step-no">STEP 03</p>
+        <h5>INSPECTION</h5>
+        <p>Full digital inspection. No hidden issues.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="process-card">
+        <p class="step-no">STEP 04</p>
+        <h5>SERVICE</h5>
+        <p>Experts work while you get live updates.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="process-card">
+        <p class="step-no">STEP 05</p>
+        <h5>COLLECT</h5>
+        <p>Pay & drive with confidence.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Services (Cards) --><div class="container py-5 fade-in services-section">
+  <h2 class="text-center">Our Services</h2>
+
+  <div class="row mt-4 text-center">
+
+<div class="col-md-4 col-sm-12">
+  <div class="card p-3">
+    <h5><i class="bi bi-tools service-icon"></i> Car Repair</h5>
+    <p>Professional repair services</p>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-12">
+  <div class="card p-3">
+    <h5><i class="bi bi-droplet service-icon"></i> Car Wash</h5>
+    <p>Keep your car spotless</p>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-12">
+  <div class="card p-3">
+    <h5><i class="bi bi-speedometer2 service-icon"></i> Oil Change</h5>
+    <p>Maintain engine health</p>
+  </div>
+</div>
+<div class="col-md-4 col-sm-12">
+  <div class="card">
+    <i class="bi bi-brush service-icon"></i>
+    <h5>Car Detailing</h5>
+    <p>Premium interior & exterior cleaning</p>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-12">
+  <div class="card">
+    <i class="bi bi-battery-charging service-icon"></i>
+    <h5>Battery Check</h5>
+    <p>Ensure smooth and reliable start</p>
+  </div>
+</div>
+
+<div class="col-md-4 col-sm-12">
+  <div class="card">
+    <i class="bi bi-gear service-icon"></i>
+    <h5>Engine Diagnostics</h5>
+    <p>Advanced system health analysis</p>
+  </div>
+</div>
+  </div>
+</div>
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+
+      <!-- HEADER -->
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Your Booking</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- BODY -->
+      <div class="modal-body">
+
+        <div class="row">
+
+          <!-- LEFT FORM -->
+          <div class="col-md-7">
+            <form id="bookingForm">
+
+              <div class="mb-3">
+  <input type="text" id="plan" class="form-control bg-warning text-dark fw-bold text-center" readonly>
+</div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="text" id="name" class="form-control" placeholder="Full Name" required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <input type="tel" id="phone" class="form-control" placeholder="Phone Number" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <input type="text" id="car" class="form-control" placeholder="Car Model" required>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input type="datetime-local" id="pickup" class="form-control" required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <input type="datetime-local" id="delivery" class="form-control" readonly>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <select id="payment" class="form-control" required>
+                  <option value="">Payment Method</option>
+                  <option>UPI</option>
+                  <option>Card</option>
+                  <option>Cash</option>
+                </select>
+              </div>
+
+              <button type="submit" id="submitBtn" class="btn btn-warning w-100" disabled>
+                Confirm Booking
+              </button>
+
+            </form>
+          </div>
+
+          <!-- RIGHT SUMMARY -->
+          <div class="col-md-5 bg-dark text-white p-4 rounded">
+            <h5 class="text-warning">Booking Summary</h5>
+
+            <p><strong>Plan:</strong> <span id="summaryPlan">-</span></p>
+            <p><strong>Name:</strong> <span id="summaryName">-</span></p>
+            <p><strong>Car:</strong> <span id="summaryCar">-</span></p>
+            <p><strong>Pickup:</strong> <span id="summaryPickup">-</span></p>
+            <p><strong>Delivery:</strong> <span id="summaryDelivery">-</span></p>
+            <p><strong>Token:</strong> <span id="summaryToken">-</span></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container py-5 text-center" id="packages">
+
+  <h2 class="mb-5">SERVICE PACKAGES</h2>
+
+  <div class="row g-4">
+
+    <!-- Essential -->
+    <div class="col-md-4">
+      <div class="package-card">
+        <h4>Essential Care</h4>
+        <h2 class="price">₹1,499</h2>
+
+        <ul class="text-start">
+          <li>Oil Change</li>
+          <li>Filter Replacement</li>
+          <li>Basic Cleaning</li>
+        </ul>
+
+        <button type="button" class="btn btn-light btn-plan mt-3 px-4 py-2"
+          onclick="openForm('Essential Care - ₹1,499',this)"
+          data-bs-toggle="modal"
+          data-bs-target="#bookingModal">
+          Choose Plan
+        </button>
+      </div>
+    </div>
+
+    <!-- Premium (FEATURED) -->
+    <div class="col-md-4">
+      <div class="package-card featured">
+        <h4>Premium Package</h4>
+        <h2 class="price">₹4,999</h2>
+
+        <ul class="text-start">
+          <li>Full Service</li>
+          <li>Engine Diagnostics</li>
+          <li>Interior Cleaning</li>
+        </ul>
+
+        <button type="button" class="btn btn-light btn-plan mt-3 px-4 py-2"
+          onclick="openForm('Premium Package - ₹4,999',this)"
+          data-bs-toggle="modal"
+          data-bs-target="#bookingModal">
+          Choose Plan
+        </button>
+      </div>
+    </div>
+
+    <!-- Elite -->
+    <div class="col-md-4">
+      <div class="package-card">
+        <h4>Velocity Elite</h4>
+        <h2 class="price">₹12,999</h2>
+
+        <ul class="text-start">
+          <li>Everything Included</li>
+          <li>Ceramic Coating</li>
+          <li>6 Month Warranty</li>
+        </ul>
+
+        <button type="button" class="btn btn-light btn-plan mt-3 px-4 py-2"
+          onclick="openForm('Velocity Elite - ₹12,999',this)"
+          data-bs-toggle="modal"
+          data-bs-target="#bookingModal">
+          Choose Plan
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container py-5 text-center fade-in">
+  <h2 class="mb-4">What Our Customers Say</h2>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card p-3 shadow">
+        <p>"Amazing service! My car feels brand new."</p>
+        <h6>- Rahul</h6>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3 shadow">
+        <p>"Fast pickup and delivery. Very reliable."</p>
+        <h6>- Sneha</h6>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3 shadow">
+        <p>"Best pricing and transparency I’ve seen."</p>
+        <h6>- Arjun</h6>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container py-3 text-white">
+
+  <p class="text-center" style="color:#0b1f3a;">HOW WE GOT HERE</p>
+  <h2 class="text-center mb-5">OUR <span class="text-warning">JOURNEY</span></h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <h4>2008</h4>
+      <p>Started in Hyderabad with basic services.</p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <h4>2012</h4>
+      <p>Expanded with certified technicians.</p>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="dot"></div>
+      <h4>2016</h4>
+      <p>Luxury division launched.</p>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="dot"></div>
+      <h4>2020</h4>
+      <p>Digital booking & tracking introduced.</p>
+    </div>
+
+    <div class="timeline-item highlight">
+      <div class="dot"></div>
+      <h4>2023</h4>
+      <p>EV servicing certification.</p>
+    </div>
+
+  </div>
+</div>
+<div class="cta-section text-center">
+
+  <h2>READY TO MEET YOUR CAR'S<br>NEW BEST FRIEND?</h2>
+
+  <p>Schedule a service or ask a question — we respond fast.</p>
+
+  <button class="btn-cta"
+data-bs-toggle="modal"
+data-bs-target="#bookingModal">
+GET IN TOUCH
+</button>
+
+</div>
+{% endblock %}
